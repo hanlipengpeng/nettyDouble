@@ -1,6 +1,7 @@
 package com.zzrenfeng.thread.thread;
 /**
  * syn锁不光是在一个代码体中多次使用的，可以是两个不同的线程中去争抢锁的
+ * 无需手动释放锁，当程序执行完毕会自动的释放锁，或者遇到异常也会释放锁
  * @author Administrator
  *
  */
