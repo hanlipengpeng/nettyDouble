@@ -16,6 +16,7 @@ public class Producer implements Runnable {
             String temp = "A Product, 生产线程："  
                     + Thread.currentThread().getName();  
             queue.put(temp);//如果队列是满的话，会阻塞当前线程  
+            //queue.
         } catch (InterruptedException e) {  
             e.printStackTrace();  
         }  
