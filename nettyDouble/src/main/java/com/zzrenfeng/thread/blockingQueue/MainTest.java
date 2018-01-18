@@ -2,7 +2,11 @@ package com.zzrenfeng.thread.blockingQueue;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
-
+/**
+ * BlockQueue线程安全的
+ * @author hanlipeng
+ *
+ */
 public class MainTest {
 	public static void main(String[] args) throws Exception {
 		BlockingQueue<String> queue = new LinkedBlockingQueue<String>(2);
