@@ -5,6 +5,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 /**
  * BlockQueue线程安全的
  * @author hanlipeng
+ * blockingQueue 是一个线程安全的list，有两种实现，分别是Array实现和Linked实现，数据结构决定了其性质
  *
  */
 public class MainTest {
