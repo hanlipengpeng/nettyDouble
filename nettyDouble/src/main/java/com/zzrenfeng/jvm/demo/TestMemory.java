@@ -3,7 +3,8 @@ package com.zzrenfeng.jvm.demo;
 import java.util.ArrayList;
 /**
  * 64kb/50毫秒
- * @author wilson
+ * -Xms100m -Xmx100m -XX:+UseSerialGC
+ * @author hanlipeng
  *
  */
 public class TestMemory {
