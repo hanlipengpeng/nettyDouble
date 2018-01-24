@@ -3,10 +3,10 @@ package com.zzrenfeng.netty.sendObject.client;
 import com.zzrenfeng.netty.sendObject.bean.Person;
 
 import io.netty.buffer.ByteBuf;
-import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 
-public class EchoClientHandler extends ChannelHandlerAdapter {
+public class EchoClientHandler extends ChannelInboundHandlerAdapter {
 	// 客户端连接服务器后被调用
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {

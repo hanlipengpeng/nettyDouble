@@ -4,16 +4,11 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 
-public class EchoClientHandler extends ChannelHandlerAdapter {
+public class EchoClientHandler extends ChannelInboundHandlerAdapter {
 
-	@Override
-	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-		System.out.println("client exceptionCaught..");
-		// 释放资源
-		ctx.close();
-	}
-
+	// 客户端连接服务器后被调用
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
 		System.out.println("客户端连接服务器，开始发送数据……");
@@ -22,9 +17,11 @@ public class EchoClientHandler extends ChannelHandlerAdapter {
 		firstMessage.writeBytes(req);//发送
 		ctx.writeAndFlush(firstMessage);//flush
 	}
-
+	
+	// • 从服务器接收到数据后调用
 	@Override
-	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+	public void channelRead(ChannelHandlerContext ctx, Object msg)
+			throws Exception {
 		System.out.println("client 读取server数据..");
 		// 服务端返回消息后
 		ByteBuf buf = (ByteBuf) msg;
@@ -33,6 +30,14 @@ public class EchoClientHandler extends ChannelHandlerAdapter {
 		String body = new String(req, "UTF-8");
 		System.out.println("服务端数据为 :" + body);
 	}
-	
+
+	// • 发生异常时被调用
+	@Override
+	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)
+			throws Exception {
+		System.out.println("client exceptionCaught..");
+		// 释放资源
+		ctx.close();
+	}
 }
 
