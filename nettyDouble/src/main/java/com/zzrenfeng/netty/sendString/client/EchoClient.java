@@ -9,7 +9,11 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
-
+/**
+ * 连接服务器 • 写数据到服务器 • 等待接受服务器返回相同的数据 • 关闭连接
+ * @author hanlipeng
+ *
+ */
 public class EchoClient {
 
 	private final String host;

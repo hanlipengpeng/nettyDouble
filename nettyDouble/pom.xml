@@ -22,12 +22,22 @@
     </dependency>
     
     <!-- netty 依赖 -->
+    <!-- 这里抛弃了netty5.0，应为官网已经抛弃5.0了，现在的最新版本是4.X的 -->
     <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
 	<dependency>
 	    <groupId>io.netty</groupId>
 	    <artifactId>netty-all</artifactId>
-	    <version>5.0.0.Alpha2</version>
+	    <version>4.1.6.Final</version>
 	</dependency>
+    
+    
+    
+    
+<!-- 	<dependency>
+	    <groupId>io.netty</groupId>
+	    <artifactId>netty-all</artifactId>
+	    <version>5.0.0.Alpha2</version>
+	</dependency> -->
     
     <!-- activeMQ -->
     <!-- https://mvnrepository.com/artifact/org.apache.activemq/activemq-all -->
