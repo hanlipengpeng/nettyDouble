@@ -3,10 +3,12 @@ package com.peng.dubbo.sampleAnnotation.provider.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.alibaba.dubbo.config.annotation.Service;
 import com.peng.dubbo.sample.provider.SampleService;
 import com.peng.dubbo.sample.provider.impl.User;
-
+@Component
 @Service 
 public class SampleServiceImpl implements SampleService {
 //@Service(interfaceName="com.mujourney.service.UserService",timeout=10000)
