@@ -9,7 +9,7 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.peng.dubbo.sample.provider.SampleService;
 import com.peng.dubbo.sample.provider.impl.User;
 @Component
-@Service
+@Service(interfaceName="com.peng.dubbo.sample.provider.SampleService")
 public class SampleServiceImpl implements SampleService {
 
 	@Override
