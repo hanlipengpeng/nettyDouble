@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.peng.dubbo.sample.provider.SampleService;
+import com.peng.dubbo.sample.provider.impl.User;
 
 public class SampleServiceImpl implements SampleService {
 
