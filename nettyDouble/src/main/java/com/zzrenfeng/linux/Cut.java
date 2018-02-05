@@ -1,5 +1,6 @@
 package com.zzrenfeng.linux;
 /**
+
  * cut用法
  * 命令可以从一个文本文件或者文本流中提取文本列。
  * 
