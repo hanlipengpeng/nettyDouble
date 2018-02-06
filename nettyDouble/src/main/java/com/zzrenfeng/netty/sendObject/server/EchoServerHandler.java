@@ -21,7 +21,7 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
 		System.out.println("server 读取数据完毕..");
         ctx.flush();//刷新后才将数据发出到SocketChannel
 	}
-
+ 
 	@Override
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)
 			throws Exception {
